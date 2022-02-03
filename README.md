@@ -28,9 +28,6 @@ Will expose nginx on port 80
 cd nginx-dispatcher-register-postgres/
 docker-compose up
 ```
-### Links
-
-https://github.com/fteychene/cloud-cadavre-exquis
 
 ## Deploy provider (machine 2 and 3) :
 You need to deploy 2 machine on your cloud provider, each of them need python3 and sudo.
@@ -70,6 +67,9 @@ Go to **ansible-provider-deploy** and execute
 ansible-playbook -e "REGISTER_URLS=register.fr"  main.yaml
 ```
 
+### Links
+
+https://github.com/fteychene/cloud-cadavre-exquis
 
 
 
