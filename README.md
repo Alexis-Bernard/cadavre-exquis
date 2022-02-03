@@ -1,7 +1,6 @@
 # cadavre-exquis
 
-![alt text](https://drive.google.com/file/d/1GZu1Ubk3ig9g-J6rmIJb_XXNJR-oQyZs/view?usp=sharing
-)
+![alt text](https://i.imgur.com/Jtd2vmm.png)
 
 ## Requirement
 
