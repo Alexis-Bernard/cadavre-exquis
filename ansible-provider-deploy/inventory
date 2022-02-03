@@ -1,0 +1,7 @@
+worker1 ansible_user=debian ansible_host=51.68.82.57 ansible_ssh_private_key_file='./home/maxtho/.ssh/id_rsa'
+worker2 ansible_user=debian ansible_host=146.59.242.10 ansible_ssh_private_key_file='./home/maxtho/.ssh/id_rsa'
+
+[application]
+
+worker2
+worker1

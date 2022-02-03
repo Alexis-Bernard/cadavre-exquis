@@ -1,0 +1,27 @@
+- include: docker.yaml
+
+- name: Install requirements for docker ansible
+  pip:
+    name:
+      - docker
+
+- name: Pull application image
+  community.docker.docker_image:
+    name: fteychene/cloud-cadavre-exquis-provider
+    source: pull
+
+- name: Run application
+  community.docker.docker_container:
+    name: '{{ item.name }}'
+    image: fteychene/cloud-cadavre-exquis-provider
+    state: started
+    restart_policy: always
+    env: 
+     REGISTER_URLS: "{{ REGISTER_URLS }}"
+     WORD_TYPE: "{{ item.verb }}"  
+     PORT: '{{ item.port }}'
+    network_mode: host
+  loop:
+   - {name: "App1",port: "8000",verb: "ADJECTIVE"}
+   - {name: "App2",port: "8001",verb: "VERB"}
+   - {name: "App3",port: "8002",verb: "SUBJECT"}

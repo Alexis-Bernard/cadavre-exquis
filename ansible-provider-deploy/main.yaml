@@ -1,0 +1,9 @@
+---
+# Install application
+- hosts: application
+  become: yes
+  become_user: root
+  roles:
+    - app/install
+# TODO : Configure applicaton routing (cf application/routing/main.yaml)
+
