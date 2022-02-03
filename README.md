@@ -33,7 +33,7 @@ docker-compose up
 You need to deploy 2 machine on your cloud provider, each of them need python3 and sudo.
 
 ### Edit inventory
-edit file **ansible-provider-deploy/inventory**
+Edit file **ansible-provider-deploy/inventory**
 ```config
 worker1 ansible_user=<user> ansible_host=<host1_ip> ansible_ssh_private_key_file='<path_to_private_key>'
 worker2 ansible_user=debian ansible_host=<host2_ip>  ansible_ssh_private_key_file='<path_to_private_key>'
@@ -43,20 +43,20 @@ worker2 ansible_user=debian ansible_host=<host2_ip>  ansible_ssh_private_key_fil
 worker2
 worker1 
 ```
-/!\ User need to be sudoers
+/!\ User needs to be sudoers
 
 ### Add domain
 We are providing domain register.fr to communicate with register.
-Edit file **/etc/hosts** on machine 2 & 3 and add 
-```
-<register_ip>(machine 1)  register.fr
+Edit file **/etc/hosts** on machine 2 & 3 and add
+```bash
+<machine1_ip> register.fr
 ```
 And replace 
-```
-127.0.0.1       <hostname>
+```bash
+127.0.1.1       <hostname>
 ``` 
 by
-```
+```bash
 <ip_of_machine>   <hostname>
 ``` 
 Because docker provide local ip by default
