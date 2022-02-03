@@ -1,4 +1,0 @@
-- name: Add hostname
-  add_host:
-        name: 'register.fr'
-        ansible_host: '192.168.1.1'
