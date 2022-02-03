@@ -1,7 +1,5 @@
 # cadavre-exquis
 
-A project to create 
-
 ## Requirement
 
 Installing docker
