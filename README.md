@@ -21,14 +21,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 chmod +x /usr/local/bin/docker-compose
 ```
 
-```bash
-adduser ansible # Ensure that the password is "ansible"
-apt install sudo
-usermod -aG sudo ansible
-sudo visudo # Add "ansible ALL=(ALL) NOPASSWD: ALL" at the end of file
-
-```
-
 ### Install nginx & dispatcher & register & postgres
 
 Will expose nginx on port 80
