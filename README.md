@@ -53,23 +53,20 @@ Edit file **/etc/hosts** on machine 2 & 3 and add
 ```
 And replace 
 ```bash
-127.0.1.1       <hostname>
+127.0.1.1 <hostname>
 ``` 
 by
 ```bash
-<ip_of_machine>   <hostname>
+<host_ip> <hostname>
 ``` 
 Because docker provide local ip by default
 
 ### Deploy
 Go to **ansible-provider-deploy** and execute 
 ```bash
-ansible-playbook -e "REGISTER_URLS=register.fr"  main.yaml
+ansible-playbook -e "REGISTER_URLS=register.fr" main.yaml
 ```
 
 ### Links
 
 https://github.com/fteychene/cloud-cadavre-exquis
-
-
-
